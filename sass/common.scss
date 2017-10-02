@@ -6,8 +6,9 @@ img {
 	max-width: 100%;
 }
 body {
-	@include gradient-y(#e2e9ed, #fefefe, 0%, 10%);
-
+	background-image: url('../images/styles/map-bg.png'), linear-gradient(to bottom, #e2e9ed 0%, #fefefe 10%);
+	background-repeat: no-repeat, repeat-x; 
+	background-position:  center 0;
 	font: 12px/1.5 Arial, "Tahoma", sans-serif;
 	color: #3c3c3c;
 	margin: 0;

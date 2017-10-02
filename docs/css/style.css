@@ -7,9 +7,10 @@ img {
   max-width: 100%; }
 
 body {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e2e9ed), color-stop(10%, #fefefe));
-  background-image: linear-gradient(to bottom, #e2e9ed 0%, #fefefe 10%);
-  background-repeat: repeat-x;
+  background-image: url("../images/styles/map-bg.png"), -webkit-gradient(linear, left top, left bottom, from(#e2e9ed), color-stop(10%, #fefefe));
+  background-image: url("../images/styles/map-bg.png"), linear-gradient(to bottom, #e2e9ed 0%, #fefefe 10%);
+  background-repeat: no-repeat, repeat-x;
+  background-position: center 0;
   font: 12px/1.5 Arial, "Tahoma", sans-serif;
   color: #3c3c3c;
   margin: 0; }
@@ -30,6 +31,26 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2em;
   line-height: 1.3; }
+
+.facebook {
+  width: 24px;
+  height: 24px;
+  background: url("../images/social/sprites.png") -10px -10px; }
+
+.linkedin {
+  width: 24px;
+  height: 24px;
+  background: url("../images/social/sprites.png") -54px -10px; }
+
+.rss {
+  width: 24px;
+  height: 24px;
+  background: url("../images/social/sprites.png") -10px -54px; }
+
+.twitter {
+  width: 24px;
+  height: 24px;
+  background: url("../images/social/sprites.png") -54px -54px; }
 
 .header {
   padding: 20px 0;
@@ -546,9 +567,9 @@ h1 {
   margin: 0 -5px; }
   .social-links li {
     margin: 0 5px; }
-  .social-links img {
+  .social-links .icon {
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%); }
-  .social-links a:hover img {
+  .social-links a:hover .icon {
     -webkit-filter: grayscale(0);
             filter: grayscale(0); }

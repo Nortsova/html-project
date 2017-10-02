@@ -51,11 +51,11 @@
 	li {
 		margin: 0 5px;
 	}
-	img {
+	.icon {
 		filter: grayscale(100%);
 	}
 	a:hover {
-		img {
+		.icon {
 			filter: grayscale(0);
 		}
 	}
