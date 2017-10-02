@@ -1,0 +1,35 @@
+* {
+	box-sizing: border-box;
+}
+img {
+	vertical-align: middle;
+	max-width: 100%;
+}
+body {
+	@include gradient-y(#e2e9ed, #fefefe, 0%, 10%);
+
+	font: 12px/1.5 Arial, "Tahoma", sans-serif;
+	color: #3c3c3c;
+	margin: 0;
+}
+
+.container {
+	max-width: 980px;
+	margin: 0 auto; 
+}
+
+.main-wrapper {
+	border-bottom: 1px solid #dcdcdc;
+	box-shadow: 3px 0 4px rgba(0,0,0,.2);
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
+	margin: 0;
+}
+
+h1 {
+	font-size: 2em;
+	line-height: 1.3;
+}
+

@@ -1,0 +1,159 @@
+.header {
+	padding: 20px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@media screen and (max-width: 768px) {
+		display: block;
+		.logo {
+			text-align: center;
+		}
+	}
+}
+
+.header-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0 20px;
+	list-style: none;
+
+	ul {
+		display: none;
+	}
+	li {
+		padding: 10px 12px;
+		position: relative;
+	}
+	a {
+		text-decoration: none;
+		color: #3c3c3c;
+	}
+	li {
+		&:hover,
+		&:focus,
+		&:active,
+		&.active {
+			& > a {
+				color: #ae3b44;
+			}
+			& > ul {
+				display: block;
+			}
+		}
+	}
+	.dropdown-list {
+		z-index: 10;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		transform: translateX(-50%);
+		width: 145px;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 0;
+			height: 0;
+			border: 5px solid transparent;
+			border-bottom-color: #212121;
+			left: 50%;
+			bottom: 100%;
+			transform: translateX(-50%);
+		}
+		li {
+			padding: 0 4px 0 0;
+		}
+		a {
+			display: block;
+			padding: 10px;
+			background-color: #212121;
+			color: #9ca0a2;
+			border-bottom: 1px solid rgba(255,255,255,.05);
+		}
+		li {
+			&:hover,
+			&:focus,
+			&:active,
+			&.active {
+				& > a {
+					color: #fff;
+				}
+				&.drop-item {
+					&:before {
+						content: "";
+						position: absolute;
+						width: 0;
+						height: 0;
+						border: 5px solid transparent;
+						border-left-color: #fff;
+						right: 0;
+						top: 50%;
+						transform: translateX(7px) translateY(-50%);
+						z-index: 2;
+					}
+					&:after {
+						content: "";
+						position: absolute;
+						width: 0;
+						height: 0;
+						border: 5px solid transparent;
+						border-left-color: #212121;
+						right: 0;
+						top: 50%;
+						transform: translateX(4px) translateY(-50%);
+						z-index: 3;
+					}
+				}
+			}
+		}
+
+		ul {
+			position: absolute;
+			left: 100%;
+			top: 0;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			width: 145px;
+		}
+	}
+
+
+	@media screen and (max-width: 768px) {
+		display: block;
+		padding: 0;
+
+		li {
+			padding: 4px;
+			text-align: center;
+		}
+
+		.dropdown-list {
+			position: static;
+			transform: translateX(0);
+			width: 100%;
+			&:before {
+				display: none;
+			}
+			li {
+				padding: 0;
+			}
+			ul {
+				position: static;
+				width: 100%;
+				a {
+					background-color: #3e3e3e;
+				}
+			}
+			.drop-item {
+				&:before,
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,107 @@
+
+
+.menu-heading {
+	background-image: url('../images/styles/line-pattern.png');
+	padding: 10px;
+	h3 {
+		font-size: 1.5em;
+		margin: 0;
+	}
+}
+
+.main-menu {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		border-top: 1px solid #e7e7e7;
+	}
+	li {
+		border-bottom: 1px solid #e7e7e7;
+		background-color: #fefefe;
+		a {
+			color: #3c3c3c;
+			padding: 10px;
+			text-decoration: none;
+			display: block;
+		}
+		ul {
+			display: none;
+		}
+
+		&:last-child {
+			border: none;
+		}
+		 
+		a:hover {
+			color: #ae3b44;
+		}
+		&.active{
+			position: relative;
+			a {
+				background-color: #ae3b44;
+				color: #fff;
+
+				&:before {
+					content: "";
+					position: absolute;
+					width: 0;
+					height: 0;
+					border: 5px solid transparent;
+					border-left-color: #ae3b44;
+					left: 100%;
+					top: 50%;
+					transform: translateY(-50%);
+					@media screen and (max-width: 480px) {
+						display: none;
+					}
+				}
+			}
+		}
+		&.toggle {
+			& > a {
+				position: relative;
+				&:after {
+					content: '';
+					width: 10px;
+					height: 10px;
+					position: absolute;
+					right: 15px;
+					top: 50%;
+					transform: translateY(-50%);
+					background-image: url('../images/styles/arrow.png');
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+			}
+
+			ul {
+				li {
+					background-color: #f4f7f8;
+					a {
+						padding-left: 30px;
+					}
+					.toggle {
+						& > a {
+							padding-left: 50px;
+							&:after {
+								left:25px;
+							}
+						}
+					}
+				}
+			}
+
+			&.open {
+				& > a {
+					&:after {
+						transform: rotate(90deg) translateX(-50%);
+					}
+				}
+				& > ul {
+					display: block;
+				}
+			}
+		}
+	}
+}

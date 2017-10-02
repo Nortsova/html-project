@@ -1,0 +1,84 @@
+.news {
+	border-top: 7px solid #212121;
+	background-color: #ae3b44;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	color: #222222;
+	position: relative;
+	&-item {
+		display: flex;
+		padding: 20px;
+		h1 {
+			color: #fff;
+			flex: 0 1 25%;
+			padding: 0 10px;
+			min-width: 210px;
+			margin: 0;
+		}
+		p {
+			margin: 0;
+			flex: 0 1 75%;
+		}
+		@media screen and (max-width: 768px) {
+			flex-wrap: wrap;
+			& > * {
+				flex-basis: 100%;
+			}
+			h1 {
+				padding: 0;
+				min-width: 100%;
+			}
+		}
+	}
+	&-image {
+		display: flex;
+		width: 25%;
+		justify-content: center;
+		@media screen and (max-width: 768px) {
+			width: 40%;
+			align-items: center;
+		}
+		@media screen and (max-width: 480px) {
+			width: 100%;
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+	&-list {
+		width: 75%;
+		@media screen and (max-width: 768px) {
+			width: 60%;
+		}
+		@media screen and (max-width: 480px) {
+			width: 100%;
+		}
+	}
+	&-control {
+		display: flex;
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+		.next,
+		.prev {
+			display: block;
+			width: 16px;
+			height: 16px;
+			overflow: hidden;
+			text-indent: 9999px;
+			background-image: url('../images/styles/news-arrow.png');
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		.prev {
+			transform: scale(-1, 1);
+		}
+		a {
+			&:hover {
+				opacity: .8;
+			}
+		}
+	}
+}
+

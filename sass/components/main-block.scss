@@ -1,0 +1,40 @@
+.main-block {
+	display: flex;
+	flex-wrap: wrap;
+	padding:30px 0;
+
+	hr {
+		margin: 15px 0;
+		padding: 0;
+		border: none;
+		border-bottom: 1px solid #ebecec;
+	}
+}
+
+
+
+.main-menu {
+	width: 25%;
+}
+.article {
+	width: 75%;
+}
+
+@media screen and (max-width: 768px) {
+
+	.main-menu {
+		width: 33.333%;
+	}
+	.article {
+		width: 66.666%;
+	}
+}
+@media screen and (max-width: 480px) {
+	
+		.main-menu {
+			width: 100%;
+		}
+		.article {
+			width: 100%;
+		}
+	}

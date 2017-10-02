@@ -1,0 +1,27 @@
+.clients {
+	display: flex;
+	flex-wrap: wrap;
+	flex-basis: 100%;
+	margin: 0;
+	list-style: none;
+	justify-content: center;
+	align-items: center;
+	border-top: 1px solid #ebecec;
+	padding: 30px 10px;
+	text-align: center;
+	& > * {
+		flex-grow: 1;
+		padding: 10px;
+	}
+	h3 {
+		font-size: 1.6em;
+	}
+	img {
+		filter: grayscale(60%);
+	}
+	a:hover {
+		img {
+			filter: grayscale(0);
+		}
+	}
+}
