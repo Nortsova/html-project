@@ -1,25 +1,16 @@
 .news {
 	border-top: 7px solid #212121;
-	background-color: #ae3b44;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
 	color: #222222;
 	position: relative;
+	overflow: hidden;
+	&-list {
+		width: 9999px;
+		overflow: hidden;
+	}
 	&-item {
 		display: flex;
-		padding: 20px;
-		h1 {
-			color: #fff;
-			flex: 0 1 25%;
-			padding: 0 10px;
-			min-width: 210px;
-			margin: 0;
-		}
-		p {
-			margin: 0;
-			flex: 0 1 75%;
-		}
+		float: left;
+		background-color: #ae3b44;
 		@media screen and (max-width: 768px) {
 			flex-wrap: wrap;
 			& > * {
@@ -46,13 +37,33 @@
 			max-width: 100%;
 		}
 	}
-	&-list {
+	&-text {
 		width: 75%;
+		padding: 20px;
+		display: flex;
 		@media screen and (max-width: 768px) {
+			flex-wrap: wrap;
 			width: 60%;
 		}
 		@media screen and (max-width: 480px) {
 			width: 100%;
+		}
+
+		h1 {
+			color: #fff;
+			flex: 0 1 25%;
+			padding: 0 10px;
+			min-width: 210px;
+			margin: 0;
+		}
+		p {
+			margin: 0;
+			flex: 0 1 75%;
+		}
+		@media screen and (max-width: 768px) {
+			h1,p {
+				flex-basis: 100%;
+			}
 		}
 	}
 	&-control {

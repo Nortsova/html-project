@@ -196,35 +196,18 @@ h1 {
 
 .news {
   border-top: 7px solid #212121;
-  background-color: #ae3b44;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   color: #222222;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
+  .news-list {
+    width: 9999px;
+    overflow: hidden; }
   .news-item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 20px; }
-    .news-item h1 {
-      color: #fff;
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 25%;
-              flex: 0 1 25%;
-      padding: 0 10px;
-      min-width: 210px;
-      margin: 0; }
-    .news-item p {
-      margin: 0;
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 75%;
-              flex: 0 1 75%; }
+    float: left;
+    background-color: #ae3b44; }
     @media screen and (max-width: 768px) {
       .news-item {
         -ms-flex-wrap: wrap;
@@ -254,14 +237,37 @@ h1 {
         width: 100%; } }
     .news-image img {
       max-width: 100%; }
-  .news-list {
-    width: 75%; }
+  .news-text {
+    width: 75%;
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
     @media screen and (max-width: 768px) {
-      .news-list {
+      .news-text {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         width: 60%; } }
     @media screen and (max-width: 480px) {
-      .news-list {
+      .news-text {
         width: 100%; } }
+    .news-text h1 {
+      color: #fff;
+      -webkit-box-flex: 0;
+          -ms-flex: 0 1 25%;
+              flex: 0 1 25%;
+      padding: 0 10px;
+      min-width: 210px;
+      margin: 0; }
+    .news-text p {
+      margin: 0;
+      -webkit-box-flex: 0;
+          -ms-flex: 0 1 75%;
+              flex: 0 1 75%; }
+    @media screen and (max-width: 768px) {
+      .news-text h1, .news-text p {
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%; } }
   .news-control {
     display: -webkit-box;
     display: -ms-flexbox;
